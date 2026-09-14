@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071b3a">
+<title>Mukesh J & Priyanka B | Wedding Invitation</title>
+<style>
+:root{--navy:#071b3a;--navy2:#0b2a55;--gold:#c79a3b;--gold2:#f2d58b;--cream:#fffaf0;--ink:#17233a;--muted:#5c5b57;--line:#dfc98d}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#06172f,#0b2850 45%,#071b3a);color:var(--ink);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;z-index:-1;width:280px;height:280px;border-radius:50%;filter:blur(80px);opacity:.18;pointer-events:none}body:before{background:var(--gold);top:10%;left:-150px}body:after{background:#315c91;right:-150px;bottom:10%}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}.petal{position:absolute;top:-30px;color:var(--gold2);opacity:.55;font-size:16px;animation:fall linear infinite}@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(360deg)}}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:30;height:4px;background:rgba(242,213,139,.15)}.topbar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width .2s}
+section{min-height:100svh;display:grid;place-items:center;padding:72px 18px;position:relative}
+.card{width:min(900px,100%);position:relative;background:linear-gradient(180deg,rgba(255,250,240,.985),rgba(255,247,231,.985));border:1px solid var(--line);border-radius:34px;padding:clamp(32px,6vw,72px) clamp(20px,7vw,78px);box-shadow:0 28px 90px rgba(0,0,0,.28);overflow:hidden}
+.card:before,.card:after{content:"";position:absolute;inset:12px;border:1px solid rgba(199,154,59,.42);border-radius:26px;pointer-events:none}.card:after{inset:19px;border-color:rgba(199,154,59,.16);border-radius:20px}
+.content{position:relative;z-index:2;text-align:center}.eyebrow{text-transform:uppercase;letter-spacing:4px;font-size:11px;color:#8d6b25;margin-bottom:16px}.title{font-size:clamp(48px,9vw,92px);line-height:.98;color:#102d57;margin:8px 0;font-weight:500}.amp{color:var(--gold);font-style:italic}.subtitle{font-size:clamp(17px,2.7vw,25px);line-height:1.55;color:#4e4a43}.orn{display:flex;justify-content:center;align-items:center;gap:13px;color:var(--gold);font-size:24px;margin:22px 0}.orn:before,.orn:after{content:"";height:1px;width:min(130px,20vw);background:linear-gradient(90deg,transparent,var(--gold))}.orn:after{background:linear-gradient(90deg,var(--gold),transparent)}
+.temple{position:absolute;inset:0;pointer-events:none}.temple .top,.temple .bottom{position:absolute;left:0;right:0;height:92px;background:linear-gradient(180deg,rgba(7,27,58,.98),rgba(7,27,58,.88));border-bottom:2px solid var(--gold)}.temple .bottom{top:auto;bottom:0;border-top:2px solid var(--gold);border-bottom:0}.gopuram{position:absolute;left:50%;top:0;transform:translateX(-50%);width:210px;height:88px;background:var(--navy);clip-path:polygon(50% 0,92% 100%,8% 100%);border-left:2px solid var(--gold);border-right:2px solid var(--gold)}.gopuram:after{content:"✦  ❖  ✦  ❖  ✦";position:absolute;left:50%;top:38px;transform:translateX(-50%);color:var(--gold2);white-space:nowrap;font-size:15px}.bells{position:absolute;top:58px;color:var(--gold2);font-size:22px;letter-spacing:50px;width:100%;left:0}
+.flower{position:absolute;color:var(--gold);font-size:30px;opacity:.92}.f1{left:18px;top:125px}.f2{right:18px;top:155px}.f3{left:26px;bottom:125px}.f4{right:24px;bottom:145px}.leaf{color:#6d8d6b;font-size:30px}.garland{letter-spacing:9px;color:#7e9a6c;font-size:20px;margin:2px 0 16px}
+.hero{background:linear-gradient(150deg,#06172f,#0c315e 55%,#071b3a);color:var(--cream);border:0;border-radius:0;padding-top:88px}.hero .card{background:linear-gradient(180deg,rgba(255,250,240,.985),rgba(255,247,231,.985));max-width:860px}.seal{width:74px;height:74px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 22px;color:var(--gold);font-size:30px;background:#fffaf0}.open{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;padding:16px 32px;border-radius:999px;background:var(--navy);color:var(--gold2);border:1px solid var(--gold);font:700 15px Georgia;letter-spacing:1.5px;text-decoration:none;box-shadow:0 10px 28px rgba(7,27,58,.25)}
+.section-title{font-size:clamp(38px,6vw,65px);color:#102d57;font-weight:500;margin:8px 0 18px;line-height:1.05}.body{font-size:clamp(17px,2.5vw,23px);line-height:1.6;color:#4c4842}.family-grid,.event-grid,.calendar-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.family,.event,.calendar{border:1px solid var(--line);border-radius:22px;padding:25px;background:rgba(255,255,255,.42);position:relative}.family h3,.event h3{color:#8e123c;font-size:28px;margin:8px 0 10px}.label{font-size:11px;letter-spacing:3px;color:#92702a;text-transform:uppercase}.family p,.event p{font-size:18px;line-height:1.55;margin:7px 0}.family strong{color:#102d57}.compliments{margin-top:24px;font-style:italic;color:#5b514b;font-size:18px}
+.event .date{display:inline-block;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:#8e123c;font-weight:bold;margin:10px 0}.event .time{font-size:23px;color:#102d57;font-weight:bold}.venue{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}.mapbtn,.rsvp,.calendar-btn{display:inline-block;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:bold;letter-spacing:1px;font-size:14px}.mapbtn,.rsvp{background:#8e123c;color:#fffaf0}.calendar-btn{border:1px solid #8e123c;color:#8e123c;background:transparent;margin-top:14px}
+.calendar-grid{grid-template-columns:1fr 1fr}.calendar h3{color:#8e123c;margin:3px 0}.calendar .small{color:#665f56;font-size:15px;margin-bottom:14px}.dow,.days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.dow span{font-size:11px;font-weight:bold;color:#8e123c}.days span{height:35px;display:grid;place-items:center;font-size:14px}.days .hit{background:#8e123c;color:#fff;border-radius:50%;font-weight:bold}.note{font-size:13px;color:#7a705f;margin-top:10px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:25px}.counter{background:var(--navy);color:var(--cream);border-radius:18px;padding:17px 5px;border:1px solid var(--gold)}.counter b{display:block;font-size:clamp(27px,5vw,45px);color:var(--gold2)}.counter small{letter-spacing:2px;font-size:9px}
+.footer{background:var(--navy);color:var(--cream);text-align:center}.footer .card{background:linear-gradient(145deg,#071b3a,#0b2a55);color:var(--cream);border-color:var(--gold);}.footer .section-title{color:var(--gold2)}.footer .body{color:#eee4cd}.footer .garland{color:#b8c99f}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}.visible .reveal{opacity:1;transform:none}.visible .reveal:nth-child(2){transition-delay:.08s}.visible .reveal:nth-child(3){transition-delay:.16s}.visible .reveal:nth-child(4){transition-delay:.24s}
+.auto-note{position:fixed;bottom:13px;left:50%;transform:translateX(-50%);z-index:35;background:rgba(7,27,58,.9);border:1px solid rgba(242,213,139,.45);color:#f5df9e;border-radius:999px;padding:8px 13px;font:11px Arial;letter-spacing:.4px;opacity:.9;backdrop-filter:blur(8px)}
+@media(max-width:680px){section{padding:54px 12px}.card{border-radius:26px;padding:42px 18px}.family-grid,.event-grid,.calendar-grid{grid-template-columns:1fr}.countdown{gap:7px}.counter{padding:14px 3px}.gopuram{width:150px}.bells{letter-spacing:22px}.temple .top,.temple .bottom{height:70px}.f1,.f2{top:95px}.f3,.f4{bottom:95px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.petal{display:none}.reveal{transition:none}.auto-note{display:none}}
+</style>
+</head>
+<body>
+<div class="topbar"><span id="progress"></span></div>
+<div id="petals"></div>
+<div class="auto-note">✦ The invitation will gently move through the celebration</div>
+
+<section class="hero" id="start">
+  <div class="card">
+    <div class="temple"><div class="top"><div class="gopuram"></div><div class="bells">♧ &nbsp; ♧ &nbsp; ♧</div></div><div class="bottom"></div></div>
+    <span class="flower f1">✿</span><span class="flower f2">❀</span><span class="flower f3 leaf">❧</span><span class="flower f4 leaf">❧</span>
+    <div class="content">
+      <div class="garland">✿ ❀ ✿ ❀ ✿</div>
+      <div class="eyebrow reveal">Ellaiyamman Thunai</div>
+      <div class="seal reveal">❖</div>
+      <div class="eyebrow reveal">A South Indian Wedding Celebration</div>
+      <h1 class="title reveal">Mukesh J <span class="amp">&</span><br>Priyanka B</h1>
+      <div class="orn reveal">❖</div>
+      <p class="subtitle reveal">With the blessings of our families, we invite you to celebrate our wedding and share in the joy of our new beginning.</p>
+      <p class="subtitle reveal"><b>11 & 12 October 2026</b></p>
+      <a class="open reveal" href="#families">OPEN INVITATION ↓</a>
+    </div>
+  </div>
+</section>
+
+<section id="families">
+  <div class="card"><div class="content">
+    <div class="garland reveal">❧ ✿ ❧</div><div class="eyebrow reveal">With the blessings of our families</div>
+    <h2 class="section-title reveal">Our Families</h2>
+    <p class="body reveal">Together with our parents and loved ones, we joyfully announce the wedding of their children.</p>
+    <div class="family-grid">
+      <div class="family reveal"><div class="label">Groom</div><h3>Mukesh J</h3><p>Son of<br><strong>Mr. Jaishankar & Mrs. Devika J</strong><br>Athur, Chengalpattu</p></div>
+      <div class="family reveal"><div class="label">Bride</div><h3>Priyanka B</h3><p>Daughter of<br><strong>Mr. Bharathi Babu & Mrs. Sujatha B</strong><br>Thiruvadhur, Kolathur</p></div>
+    </div>
+    <p class="compliments reveal">With best compliments from both families & relatives</p>
+  </div></div>
+</section>
+
+<section id="celebration">
+  <div class="card"><div class="content">
+    <div class="garland reveal">✿ ❀ ✿</div><div class="eyebrow reveal">The auspicious celebrations</div><h2 class="section-title reveal">Wedding & Reception</h2>
+    <div class="event-grid">
+      <div class="event reveal"><div class="label">Reception</div><h3>Sunday Evening</h3><div class="date">11 October 2026</div><div class="time">6:00 PM onwards</div><p>Arulthiru Adigalar Thirumana Mandapam<br>Melmaruvathur</p></div>
+      <div class="event reveal"><div class="label">Wedding Ceremony</div><h3>Monday Morning</h3><div class="date">12 October 2026</div><div class="time">9:00 AM – 10:30 AM</div><p>Arulthiru Adigalar Thirumana Mandapam<br>Melmaruvathur</p></div>
+    </div>
+  </div></div>
+</section>
+
+<section id="countdown">
+  <div class="card"><div class="content">
+    <div class="garland reveal">❧ ✿ ❧</div><div class="eyebrow reveal">Counting down to our sacred day</div><h2 class="section-title reveal">The Big Day</h2>
+    <p class="body reveal">Every moment brings us closer to the beginning of our beautiful journey together.</p>
+    <div class="countdown reveal"><div class="counter"><b id="days">0</b><small>DAYS</small></div><div class="counter"><b id="hours">0</b><small>HOURS</small></div><div class="counter"><b id="mins">0</b><small>MINUTES</small></div><div class="counter"><b id="secs">0</b><small>SECONDS</small></div></div>
+  </div></div>
+</section>
+
+<section id="calendar">
+  <div class="card"><div class="content">
+    <div class="garland reveal">✿ ❀ ✿</div><div class="eyebrow reveal">Save the dates</div><h2 class="section-title reveal">Two Special Days</h2>
+    <div class="calendar-grid">
+      <div class="calendar reveal"><h3>Reception</h3><div class="small">Sunday · October 11, 2026</div><div class="dow"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div><div class="days"><span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span class="hit">11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div><a class="calendar-btn" href="reception.ics">＋ ADD RECEPTION TO CALENDAR</a></div>
+      <div class="calendar reveal"><h3>Wedding</h3><div class="small">Monday · October 12, 2026</div><div class="dow"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div><div class="days"><span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="hit">12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div><a class="calendar-btn" href="wedding.ics">＋ ADD WEDDING TO CALENDAR</a></div>
+    </div>
+  </div></div>
+</section>
+
+<section id="venue">
+  <div class="card"><div class="content">
+    <div class="garland reveal">❧ ✿ ❧</div><div class="eyebrow reveal">The gathering place</div><h2 class="section-title reveal">Venue</h2>
+    <p class="body reveal"><b>Arulthiru Adigalar Thirumana Mandapam</b><br>Melmaruvathur</p>
+    <div class="venue reveal"><a class="mapbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Arulthiru%20Adigalar%20Thirumana%20Mandapam%20Melmaruvathur">⌖ GET DIRECTIONS</a></div>
+  </div></div>
+</section>
+
+<section class="footer" id="rsvp">
+  <div class="card"><div class="content">
+    <div class="garland">✿ ❀ ✿</div><div class="eyebrow" style="color:#f2d58b">A heartfelt invitation</div><h2 class="section-title">Will you join us?</h2>
+    <p class="body">Your gracious presence and blessings would make our celebration even more special.</p>
+    <a class="rsvp" href="mailto:?subject=Mukesh%20J%20%26%20Priyanka%20B%20Wedding%20RSVP&body=We%20would%20be%20delighted%20to%20join%20the%20wedding%20celebrations.">✓ CONFIRM ATTENDANCE</a>
+    <div class="orn">❖</div><p class="body" style="font-size:15px">Mukesh J & Priyanka B · 2026</p>
+  </div></div>
+</section>
+
+<script>
+const sections=[...document.querySelectorAll('section')];
+const progress=document.getElementById('progress');
+const petals=document.getElementById('petals');
+for(let i=0;i<13;i++){const p=document.createElement('span');p.className='petal';p.textContent=i%2?'✿':'•';p.style.left=(Math.random()*100)+'%';p.style.animationDuration=(10+Math.random()*12)+'s';p.style.animationDelay=(-Math.random()*18)+'s';p.style.setProperty('--drift',(Math.random()*160-80)+'px');p.style.fontSize=(9+Math.random()*10)+'px';petals.appendChild(p)}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.18});sections.forEach(s=>observer.observe(s));
+function updateProgress(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?(scrollY/max)*100:0)+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+let auto=true,manualUntil=0,autoTimer;
+function nextSection(){if(!auto||Date.now()<manualUntil)return;const y=scrollY+innerHeight*.55;let idx=sections.findIndex(s=>s.offsetTop>y);if(idx<0)idx=0;sections[idx].scrollIntoView({behavior:'smooth',block:'start'})}
+function schedule(){clearTimeout(autoTimer);autoTimer=setTimeout(()=>{nextSection();schedule()},10500)}
+function pauseAuto(){manualUntil=Date.now()+18000;clearTimeout(autoTimer);schedule()}addEventListener('touchstart',pauseAuto,{passive:true});addEventListener('wheel',pauseAuto,{passive:true});addEventListener('pointerdown',pauseAuto,{passive:true});schedule();
+const target=new Date('2026-10-12T09:00:00+05:30').getTime();
+function tick(){let x=Math.max(0,target-Date.now());document.getElementById('days').textContent=Math.floor(x/86400000);document.getElementById('hours').textContent=Math.floor(x/3600000)%24;document.getElementById('mins').textContent=Math.floor(x/60000)%60;document.getElementById('secs').textContent=Math.floor(x/1000)%60}tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
