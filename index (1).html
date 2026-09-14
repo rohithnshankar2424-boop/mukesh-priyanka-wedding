@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mukesh & Priyanka | Wedding Invitation</title>
+<style>
+:root{--navy:#061a33;--navy2:#0c3156;--gold:#b98a35;--gold2:#f0d58c;--ivory:#fff9ea;--maroon:#8c2033;--green:#54784b}
+*{box-sizing:border-box}html,body{margin:0;height:100%;font-family:Georgia,"Times New Roman",serif;background:var(--navy);color:var(--ivory);overflow:hidden}
+#app{height:100svh;width:100%;position:relative}
+.scene{position:absolute;inset:0;display:grid;place-items:center;padding:20px;opacity:0;transform:scale(1.02);pointer-events:none;transition:opacity .9s ease,transform .9s ease;background:
+radial-gradient(circle at 15% 20%,rgba(240,213,140,.12),transparent 25%),
+radial-gradient(circle at 85% 80%,rgba(185,138,53,.12),transparent 30%),
+linear-gradient(145deg,#041426,var(--navy),var(--navy2))}
+.scene.active{opacity:1;transform:scale(1);pointer-events:auto}
+.frame{width:min(900px,100%);max-height:calc(100svh - 40px);overflow:auto;text-align:center;padding:clamp(28px,5vw,70px) clamp(20px,6vw,80px);border:1px solid rgba(240,213,140,.75);border-radius:30px;background:rgba(5,23,43,.78);box-shadow:inset 0 0 0 10px rgba(185,138,53,.045),0 25px 80px rgba(0,0,0,.42);position:relative}
+.frame:before{content:"";position:absolute;inset:13px;border:1px solid rgba(240,213,140,.22);border-radius:22px;pointer-events:none}
+.kicker{letter-spacing:5px;text-transform:uppercase;color:var(--gold2);font-size:12px;margin-bottom:18px}.mono{font-size:clamp(50px,9vw,100px);color:var(--gold2);margin-bottom:12px}.mono span{color:var(--gold);font-size:.42em}
+h1{font-size:clamp(45px,8vw,86px);font-weight:500;line-height:1;margin:10px 0;color:var(--gold2)}h2{font-size:clamp(35px,6vw,65px);font-weight:500;line-height:1.1;color:var(--gold2);margin:8px 0 20px}h3{font-size:clamp(26px,4vw,38px);color:var(--gold2);margin:8px 0}
+p{font-size:clamp(18px,2.6vw,26px);line-height:1.55}.goldline{margin:22px auto;color:var(--gold);letter-spacing:12px;font-size:22px}
+.arch{width:min(500px,80%);height:120px;margin:0 auto 20px;border:2px solid var(--gold2);border-bottom:0;border-radius:260px 260px 0 0;position:relative}.arch:after{content:"✦  ❖  ✦";position:absolute;bottom:8px;left:50%;transform:translateX(-50%);color:var(--gold2);white-space:nowrap}
+.leaves{color:#9dbb7c;font-size:clamp(20px,4vw,38px);letter-spacing:10px;margin:10px}.lotus{font-size:clamp(40px,6vw,70px);color:var(--gold)}
+button,.btn{font:700 16px Georgia,serif;letter-spacing:1.5px;padding:15px 26px;border-radius:999px;border:1px solid var(--gold2);cursor:pointer;text-decoration:none;display:inline-block}.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#162337}.secondary{background:transparent;color:var(--gold2)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;text-align:left}.family{padding:18px;border-top:1px solid rgba(240,213,140,.5);border-bottom:1px solid rgba(240,213,140,.5)}.family p{font-size:18px}.event{border:1px solid rgba(240,213,140,.55);border-radius:22px;padding:24px;background:rgba(255,255,255,.035);margin:12px 0}.event .tag{color:var(--gold2);letter-spacing:3px;font-size:12px}.event strong{font-size:clamp(21px,3vw,30px)}
+.calwrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}.calendar{border:1px solid rgba(240,213,140,.55);border-radius:20px;padding:18px}.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.grid span{min-height:34px;display:grid;place-items:center;font-size:14px}.grid .head{color:var(--gold2);font-weight:bold}.grid .hit{background:var(--gold);color:#13233b;border-radius:50%;font-weight:bold}
+.count{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.count div{border:1px solid rgba(240,213,140,.5);border-radius:16px;padding:15px 5px}.count b{display:block;font-size:34px;color:var(--gold2)}.count small{font-size:10px;letter-spacing:1px}
+.controls{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:8px;z-index:10}.controls button{padding:10px 16px;font-size:13px;background:rgba(6,26,51,.9);color:var(--gold2);backdrop-filter:blur(8px)}
+.progress{position:fixed;top:0;left:0;height:3px;background:var(--gold2);width:0;z-index:20;transition:width .5s}.hint{font-size:13px;color:#d9c38d;margin-top:18px}
+@media(max-width:650px){.split,.calwrap{grid-template-columns:1fr}.count b{font-size:25px}.frame{border-radius:23px}.arch{height:80px}.controls{width:100%;justify-content:center}}
+</style>
+</head>
+<body>
+<div id="app">
+<div class="progress" id="progress"></div>
+
+<section class="scene active" data-duration="9000"><div class="frame">
+<div class="leaves">❧ ❧ ❧ ❧ ❧</div><div class="arch"></div>
+<div class="kicker">A South Indian Wedding Celebration</div>
+<div class="mono">M <span>✦</span> P</div><h1>Mukesh &<br>Priyanka</h1>
+<div class="goldline">❖ ✦ ❖</div><p>11 & 12 OCTOBER 2026</p>
+<button class="primary" id="open">OPEN INVITATION</button><div class="hint">Tap to begin your invitation journey</div>
+</div></section>
+
+<section class="scene" data-duration="9000"><div class="frame"><div class="lotus">✿</div><div class="kicker">The beginning of forever</div><h2>Two hearts.<br>One sacred journey.</h2><p>With the blessings of our loved ones, we invite you to witness and celebrate the beginning of our new life together.</p><div class="goldline">✦ ❖ ✦</div></div></section>
+
+<section class="scene" data-duration="11000"><div class="frame"><div class="kicker">With the blessings of our families</div><h2>Our Families</h2><div class="split">
+<div class="family"><div class="kicker">The Groom</div><h3>Mukesh J</h3><p>Son of<br><b>Mr. Jaishankar<br>& Mrs. Devika J</b><br><small>Athur, Chengalpattu</small></p></div>
+<div class="family"><div class="kicker">The Bride</div><h3>Priyanka B</h3><p>Daughter of<br><b>Mr. Bharathi Babu<br>& Mrs. Sujatha B</b><br><small>Thiruvadhur, Kolathur</small></p></div>
+</div><p class="hint">With best compliments from both families & relatives</p></div></section>
+
+<section class="scene" data-duration="11000"><div class="frame"><div class="kicker">The celebrations</div><h2>Mark the Moments</h2>
+<div class="event"><div class="tag">RECEPTION</div><h3>Sunday Evening</h3><strong>11 October 2026 · 6:00 PM onwards</strong><p>Arulthiru Adigalar Thirumana Mandapam<br>Melmaruvathur</p></div>
+<div class="event"><div class="tag">WEDDING CEREMONY</div><h3>Monday Morning</h3><strong>12 October 2026 · 9:00 AM – 10:30 AM</strong><p>Arulthiru Adigalar Thirumana Mandapam<br>Melmaruvathur</p></div></div></section>
+
+<section class="scene" data-duration="9000"><div class="frame"><div class="kicker">The countdown</div><h2>The sacred day is approaching</h2><div class="count"><div><b id="d">0</b><small>DAYS</small></div><div><b id="h">0</b><small>HOURS</small></div><div><b id="m">0</b><small>MINUTES</small></div><div><b id="s">0</b><small>SECONDS</small></div></div></div></section>
+
+<section class="scene" data-duration="12000"><div class="frame"><div class="kicker">Save the dates</div><h2>Two Celebrations.<br>Two Calendars.</h2><div class="calwrap">
+<div class="calendar"><h3>Reception</h3><p class="hint">Sunday · 11 October 2026</p><div class="grid">
+<span class="head">S</span><span class="head">M</span><span class="head">T</span><span class="head">W</span><span class="head">T</span><span class="head">F</span><span class="head">S</span>
+<span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span class="hit">11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div></div>
+<div class="calendar"><h3>Wedding</h3><p class="hint">Monday · 12 October 2026</p><div class="grid">
+<span class="head">S</span><span class="head">M</span><span class="head">T</span><span class="head">W</span><span class="head">T</span><span class="head">F</span><span class="head">S</span>
+<span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span class="hit">12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span></div></div>
+</div></div></section>
+
+<section class="scene" data-duration="10000"><div class="frame"><div class="kicker">The gathering place</div><h2>Venue</h2><p><b>Arulthiru Adigalar Thirumana Mandapam</b><br>Melmaruvathur</p><div class="goldline">✦ ❖ ✦</div><a class="btn primary" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Arulthiru%20Adigalar%20Thirumana%20Mandapam%20Melmaruvathur">GET DIRECTIONS</a></div></section>
+
+<section class="scene" data-duration="15000"><div class="frame"><div class="arch"></div><div class="mono">M <span>✦</span> P</div><h2>Your presence will make<br>our celebration complete.</h2><p>We look forward to sharing our happiness and receiving your blessings.</p><div class="goldline">❖ ✦ ❖</div><a class="btn primary" target="_blank" href="mailto:?subject=Mukesh%20%26%20Priyanka%20Wedding">CONFIRM ATTENDANCE</a><p class="hint">Mukesh J & Priyanka B · 2026</p></div></section>
+</div>
+
+<div class="controls"><button id="prev">◀ PREVIOUS</button><button id="pause">⏸ PAUSE</button><button id="next">NEXT ▶</button></div>
+
+<script>
+const scenes=[...document.querySelectorAll('.scene')], progress=document.getElementById('progress');
+let index=0,timer=null,playing=false;
+function show(i){
+ index=(i+scenes.length)%scenes.length;
+ scenes.forEach((s,n)=>s.classList.toggle('active',n===index));
+ progress.style.width=((index)/(scenes.length-1))*100+'%';
+ if(playing) schedule();
+}
+function schedule(){
+ clearTimeout(timer);
+ if(index===0||!playing)return;
+ timer=setTimeout(()=>{if(index<scenes.length-1)show(index+1);else{playing=false;document.getElementById('pause').textContent='▶ REPLAY';}},Number(scenes[index].dataset.duration||9000));
+}
+function start(){playing=true;show(1);document.getElementById('pause').textContent='⏸ PAUSE'}
+document.getElementById('open').onclick=start;
+document.getElementById('next').onclick=()=>{if(index<scenes.length-1)show(index+1)};
+document.getElementById('prev').onclick=()=>{if(index>0)show(index-1)};
+document.getElementById('pause').onclick=()=>{
+ if(playing){playing=false;clearTimeout(timer);pause.textContent='▶ RESUME'}
+ else {if(index===scenes.length-1){show(0);return}playing=true;pause.textContent='⏸ PAUSE';schedule()}
+};
+const target=new Date('2026-10-12T09:00:00+05:30').getTime();
+setInterval(()=>{let x=Math.max(0,target-Date.now());d.textContent=Math.floor(x/86400000);h.textContent=Math.floor(x/3600000)%24;m.textContent=Math.floor(x/60000)%60;s.textContent=Math.floor(x/1000)%60},1000);
+</script>
+</body></html>
