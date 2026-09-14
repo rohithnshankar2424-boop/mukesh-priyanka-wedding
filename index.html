@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mukesh J & Priyanka B | Wedding Invitation</title>
+<style>
+:root{--wine:#7d1834;--gold:#b99143;--cream:#fff8ec;--ink:#442f2a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at top,#fff8e9,#f3e4d1);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+.hero{min-height:100svh;display:grid;place-items:center;padding:18px;background:linear-gradient(160deg,#7d1834,#4c0d21)}
+.cover{width:min(100%,430px);min-height:640px;border-radius:28px;position:relative;display:grid;place-items:center;text-align:center;padding:34px 24px;color:#fff8ec;border:2px solid #f6c96e;box-shadow:0 25px 70px rgba(0,0,0,.35)}
+.cover:before,.cover:after{content:"✿ ❀ ✿";position:absolute;font-size:3rem;color:#f6c96e;opacity:.8;letter-spacing:10px}.cover:before{top:28px}.cover:after{bottom:28px;transform:rotate(180deg)}
+.cover h1{font-size:clamp(3rem,13vw,5.8rem);font-weight:400;line-height:.88;margin:12px 0;color:#f6c96e}.and{font-style:italic;font-size:1.5rem}.cover p{letter-spacing:.16em;text-transform:uppercase;font-size:.75rem}
+.open-btn,.btn{border:1px solid #f6c96e;background:#f6c96e;color:#62142d;border-radius:999px;padding:16px 32px;font:700 1rem Georgia,serif;cursor:pointer;text-decoration:none}
+main{max-width:720px;margin:auto;padding:18px 12px 48px}section{background:rgba(255,253,248,.94);border:1px solid rgba(185,145,67,.35);border-radius:24px;padding:30px 20px;margin:18px 0;box-shadow:0 12px 35px rgba(92,55,35,.10);text-align:center}
+.flower{font-size:2rem;color:var(--gold);letter-spacing:.3em}h2{color:var(--wine);font-size:2rem;margin:8px 0 18px;font-weight:400}.names{font-size:clamp(2.3rem,9vw,4.2rem);color:var(--wine);line-height:1.05}.gold{color:var(--gold)}.script{font-style:italic}
+.invite-img{width:100%;border-radius:16px;border:1px solid #ead6aa}.family{line-height:1.75}.family strong{color:var(--wine)}
+.event{border-top:1px solid #ead7af;padding-top:18px;margin-top:18px}.datebox{display:inline-block;padding:13px 22px;border-radius:16px;background:#fff4df;color:var(--wine);border:1px solid #e4c98d}
+.count{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:15px}.unit{min-width:68px;background:var(--wine);color:#fff;border-radius:14px;padding:12px 7px}.unit b{font-size:1.35rem;display:block}.unit span{font-size:.67rem;letter-spacing:.07em}
+.calendar{width:min(100%,400px);margin:15px auto;border-collapse:separate;border-spacing:5px}.calendar th{color:var(--wine)}.calendar td{padding:9px;border-radius:50%;width:14.2%}.calendar .mark{background:var(--wine);color:#fff;font-weight:bold}
+.actions{display:grid;gap:11px;margin-top:18px}.btn{display:block;border-radius:13px;background:var(--wine);color:#fff;border-color:var(--wine)}.btn.alt{background:#fff;color:var(--wine)}
+.map{width:100%;height:300px;border:0;border-radius:16px;margin-top:15px}.rsvp{display:none;margin-top:18px;padding:16px;border-radius:14px;background:#fff4df}input,select{width:100%;padding:13px;margin:7px 0;border-radius:10px;border:1px solid #d8b978;font:1rem Georgia,serif}footer{text-align:center;padding:18px;color:#7b665d}
+</style></head>
+<body>
+<div class="hero"><div class="cover"><div><p>We are getting married</p><h1>Mukesh<br><span class="and">&amp;</span><br>Priyanka</h1><p>11 &amp; 12 October 2026</p><button class="open-btn" onclick="document.getElementById('invitation').scrollIntoView({behavior:'smooth'})">OPEN INVITATION</button></div></div></div>
+<main id="invitation">
+<section><div class="flower">❀ ❁ ❀</div><p class="script">Together with our families</p><div class="names">Mukesh <span class="gold">&amp;</span> Priyanka</div><p>request the pleasure of your company as we begin our beautiful journey together.</p></section>
+<section><img src="invitation.png" class="invite-img" alt="Wedding invitation"></section>
+<section><div class="flower">❀ ❁ ❀</div><h2>With the blessings of our families</h2><div class="family"><strong>Groom</strong><br>Mukesh J<br><br><strong>Bride</strong><br>Priyanka B<br><br><em>With best compliments from both families &amp; relatives</em></div></section>
+<section><div class="flower">✿ ✿ ✿</div><h2>Wedding Ceremony</h2><div class="datebox">Monday, 12 October 2026</div><div class="event"><strong>9:00 AM – 10:30 AM</strong><br>Arulthiru Adigalar Thirumana Mandapam<br>Melmaruvathur</div><div class="event"><h2>Reception</h2><div class="datebox">Sunday, 11 October 2026</div><br><br><strong>6:00 PM onwards</strong></div></section>
+<section><div class="flower">❀ ❁ ❀</div><h2>Counting down to our big day</h2><div class="count"><div class="unit"><b id="d">0</b><span>DAYS</span></div><div class="unit"><b id="h">0</b><span>HOURS</span></div><div class="unit"><b id="m">0</b><span>MINUTES</span></div><div class="unit"><b id="s">0</b><span>SECONDS</span></div></div></section>
+<section><div class="flower">❀ ❁ ❀</div><h2>Save the Date</h2><strong>October 2026</strong><table class="calendar"><tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><td>11</td><td class="mark">12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr><tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr><tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr></table><div class="actions"><a class="btn" href="wedding.ics">📅 ADD WEDDING TO CALENDAR</a><a class="btn alt" href="reception.ics">✨ ADD RECEPTION TO CALENDAR</a></div></section>
+<section><div class="flower">❀ ❁ ❀</div><h2>Will you join us?</h2><p>Your presence and blessings would mean the world to us.</p><button class="btn" onclick="document.getElementById('rsvp').style.display='block';this.style.display='none'">✓ CONFIRM ATTENDANCE</button><div class="rsvp" id="rsvp"><strong>RSVP</strong><input id="guest" placeholder="Your name"><select id="attendance"><option>Yes, I will attend</option><option>Sorry, I cannot attend</option></select><button class="btn" onclick="sendRSVP()">SUBMIT RSVP</button></div></section>
+<section><div class="flower">❀ ❁ ❀</div><h2>Venue</h2><strong>Arulthiru Adigalar Thirumana Mandapam</strong><br>Melmaruvathur<iframe class="map" loading="lazy" src="https://www.google.com/maps?q=Arulthiru%20Adigalar%20Thirumana%20Mandapam%20Melmaruvathur&output=embed"></iframe><div class="actions"><a class="btn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Arulthiru%20Adigalar%20Thirumana%20Mandapam%2C%20Melmaruvathur">📍 GET DIRECTIONS</a><button class="btn alt" onclick="shareInvite()">💌 SHARE INVITATION</button></div></section>
+</main><footer>Made with love for Mukesh J &amp; Priyanka B · 2026</footer>
+<script>
+const target=new Date('2026-10-12T09:00:00+05:30').getTime();
+function tick(){let x=Math.max(0,target-Date.now());d.textContent=Math.floor(x/86400000);h.textContent=Math.floor(x%86400000/3600000);m.textContent=Math.floor(x%3600000/60000);s.textContent=Math.floor(x%60000/1000)}tick();setInterval(tick,1000);
+function sendRSVP(){const n=document.getElementById('guest').value.trim()||'Guest';const a=document.getElementById('attendance').value;location.href='https://wa.me/?text='+encodeURIComponent('RSVP for Mukesh & Priyanka Wedding\nName: '+n+'\nAttendance: '+a)}
+async function shareInvite(){const x={title:'Mukesh & Priyanka Wedding',text:'You are cordially invited to the wedding of Mukesh J & Priyanka B',url:location.href};if(navigator.share){try{await navigator.share(x)}catch(e){}}else{navigator.clipboard.writeText(location.href);alert('Invitation link copied!')}}
+</script></body></html>
