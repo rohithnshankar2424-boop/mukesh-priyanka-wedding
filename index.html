@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mukesh J & Priyanka B | Wedding Invitation</title>
+<style>
+:root{
+  --navy:#071b33; --navy-2:#0b2b4c; --navy-3:#103b62;
+  --gold:#b88a35; --gold-light:#efd18a; --gold-pale:#fff0b8;
+  --ivory:#fffaf0; --ink:#13253b; --red:#8f2032; --green:#375d42;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;color:var(--ivory);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden;
+ background:
+ radial-gradient(circle at 10% 10%,rgba(239,209,138,.11),transparent 24rem),
+ radial-gradient(circle at 90% 55%,rgba(184,138,53,.13),transparent 28rem),
+ linear-gradient(180deg,#06172b,var(--navy),#04101f);
+}
+body:before{
+ content:"";position:fixed;inset:0;pointer-events:none;opacity:.07;
+ background-image:linear-gradient(45deg,transparent 48%,#efd18a 49%,#efd18a 51%,transparent 52%),
+ linear-gradient(-45deg,transparent 48%,#efd18a 49%,#efd18a 51%,transparent 52%);
+ background-size:56px 56px;
+}
+.hero{min-height:100svh;display:grid;place-items:center;padding:22px;position:relative}
+.hero-inner{
+ width:min(980px,100%);min-height:min(760px,calc(100svh - 44px));position:relative;
+ border:1px solid rgba(239,209,138,.8);border-radius:34px;overflow:hidden;text-align:center;
+ background:linear-gradient(145deg,rgba(7,27,51,.97),rgba(11,43,76,.96));
+ box-shadow:0 35px 90px rgba(0,0,0,.45),inset 0 0 70px rgba(184,138,53,.08);
+ display:grid;place-items:center;padding:88px 28px 60px;
+}
+.hero-inner:before{content:"";position:absolute;inset:14px;border:1px solid rgba(239,209,138,.38);border-radius:24px}
+.arch{
+ position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(780px,90%);
+ height:170px;border:2px solid var(--gold-light);border-bottom:0;border-radius:390px 390px 0 0;
+ opacity:.85;
+}
+.arch:before,.arch:after{content:"";position:absolute;bottom:-1px;width:70px;height:155px;border:2px solid var(--gold-light);background:linear-gradient(180deg,rgba(184,138,53,.13),transparent)}
+.arch:before{left:8%}.arch:after{right:8%}
+.lotus{position:absolute;color:var(--gold-light);font-size:clamp(42px,6vw,74px);opacity:.9}
+.lotus.l1{left:5%;top:17%}.lotus.l2{right:5%;top:17%}
+.mango{position:absolute;top:30px;left:50%;transform:translateX(-50%);font-size:clamp(25px,4vw,45px);letter-spacing:14px;color:#9fc68b}
+.kicker{letter-spacing:6px;font-size:12px;color:var(--gold-light);text-transform:uppercase;margin-bottom:20px}
+.monogram{
+ width:116px;height:116px;border:2px solid var(--gold-light);border-radius:50%;display:grid;place-items:center;
+ margin:0 auto 24px;color:var(--gold-pale);font-size:43px;box-shadow:inset 0 0 0 8px rgba(184,138,53,.09);
+}
+.monogram span{font-size:23px;color:var(--gold)}
+h1{font-size:clamp(54px,9vw,105px);font-weight:500;line-height:.9;margin:0;color:var(--gold-pale)}
+h1 .amp{display:block;font-size:.36em;color:var(--gold);font-style:italic;margin:10px}
+.hero-date{font-size:clamp(15px,2.5vw,22px);letter-spacing:4px;color:#f7e8bc;margin:28px 0}
+.open{
+ border:1px solid var(--gold-light);background:linear-gradient(135deg,#f2d47f,#b98a34);
+ color:#172337;border-radius:999px;padding:17px 36px;font:bold 17px Georgia,serif;letter-spacing:2px;cursor:pointer;
+ box-shadow:0 12px 28px rgba(0,0,0,.24);
+}
+.open:hover{transform:translateY(-2px)}
+.ribbon{position:absolute;bottom:22px;color:rgba(239,209,138,.75);font-size:14px;letter-spacing:2px}
+section{padding:26px 16px}
+.wrap{width:min(980px,100%);margin:auto}
+.panel{
+ position:relative;background:linear-gradient(150deg,rgba(255,250,240,.99),rgba(247,235,208,.98));
+ color:var(--ink);border:1px solid rgba(239,209,138,.9);border-radius:30px;padding:clamp(28px,5vw,58px);
+ text-align:center;box-shadow:0 22px 60px rgba(0,0,0,.18);overflow:hidden;
+}
+.panel:before{content:"❖";position:absolute;top:18px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:22px}
+.section-kicker{letter-spacing:4px;color:var(--gold);font-size:12px;text-transform:uppercase;margin:14px 0}
+h2{font-size:clamp(38px,6vw,68px);font-weight:500;color:var(--navy);margin:10px 0 20px}
+p.lead{font-size:clamp(20px,3vw,29px);line-height:1.55;max-width:800px;margin:0 auto}
+.family{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:30px}
+.family-card{padding:24px 18px;border-top:1px solid #d6b667;border-bottom:1px solid #d6b667}
+.family-card h3{font-size:30px;color:var(--red);margin:0 0 12px}
+.family-card strong{font-size:22px}.family-card p{font-size:19px;line-height:1.55;margin:8px}
+.venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:24px}
+.event{background:#fffdf7;border:1px solid #d8bb72;border-radius:24px;padding:28px 18px}
+.event .badge{display:inline-block;color:#fff;background:var(--navy);padding:8px 18px;border-radius:999px;font-size:13px;letter-spacing:2px}
+.event h3{font-size:34px;color:var(--red);margin:16px 0 8px}
+.event .when{font-size:23px;line-height:1.5;font-weight:bold}.event .where{font-size:19px;line-height:1.55;margin-top:14px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:700px;margin:28px auto 0}
+.countdown div{background:var(--navy);color:#fff;border-radius:18px;padding:19px 7px;border:1px solid var(--gold)}
+.countdown b{display:block;color:var(--gold-light);font-size:36px}.countdown small{font-size:11px;letter-spacing:2px}
+.calendars{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.calendar{border:1px solid #d7b76a;border-radius:22px;padding:22px 12px;background:#fffdf8}
+.calendar h3{margin:4px;color:var(--navy);font-size:29px}.calendar .date-label{color:var(--red);font-size:18px;margin-bottom:15px}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.grid span{min-height:38px;display:grid;place-items:center;font-size:16px}
+.grid .head{font-size:12px;color:var(--gold);font-weight:bold}.grid .active{background:var(--red);color:#fff;border-radius:50%;font-weight:bold;box-shadow:0 0 0 4px rgba(143,32,50,.1)}
+.rsvp{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.button{display:inline-block;text-decoration:none;border-radius:999px;padding:15px 25px;background:var(--navy);color:#fff;font-weight:bold;border:1px solid var(--navy)}
+.button.gold{background:linear-gradient(135deg,#f0d47f,#b98a34);color:#18263a;border-color:#b98a34}
+.footer{text-align:center;padding:55px 20px;color:#e7d39b}
+.fade{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.fade.show{opacity:1;transform:none}
+@media(max-width:700px){
+ .family,.venue-grid,.calendars{grid-template-columns:1fr}.countdown b{font-size:26px}
+ .hero-inner{padding-left:20px;padding-right:20px}.arch{height:135px}.lotus{top:20%}
+}
+</style>
+</head>
+<body>
+
+<div class="hero" id="home">
+ <div class="hero-inner">
+  <div class="arch"></div>
+  <div class="mango">❧ ❧ ❧ ❧ ❧</div>
+  <div class="lotus l1">✿</div><div class="lotus l2">✿</div>
+  <div>
+   <div class="kicker">A South Indian Wedding Celebration</div>
+   <div class="monogram">M <span>✦</span> P</div>
+   <h1>Mukesh <span class="amp">&amp;</span> Priyanka</h1>
+   <div class="hero-date">11 &amp; 12 OCTOBER 2026</div>
+   <button class="open" onclick="document.getElementById('welcome').scrollIntoView({behavior:'smooth'})">OPEN INVITATION</button>
+  </div>
+  <div class="ribbon">WITH LOVE, BLESSINGS &amp; TRADITION</div>
+ </div>
+</div>
+
+<section id="welcome"><div class="wrap fade"><div class="panel">
+ <div class="section-kicker">The beginning of forever</div>
+ <h2>Two hearts. One sacred journey.</h2>
+ <p class="lead">With the blessings of our loved ones, we invite you to witness and celebrate the beginning of our new life together.</p>
+ <div style="font-size:48px;color:var(--gold);margin-top:22px">✦ ❖ ✦</div>
+</div></div></section>
+
+<section><div class="wrap fade"><div class="panel">
+ <div class="section-kicker">Our families</div><h2>With the blessings of our parents</h2>
+ <div class="family">
+  <div class="family-card"><h3>The Groom</h3><strong>Mukesh J</strong><p>Son of<br><b>Mr. Jaishankar &amp; Mrs. Devika J</b><br><small>Athur, Chengalpattu</small></p></div>
+  <div class="family-card"><h3>The Bride</h3><strong>Priyanka B</strong><p>Daughter of<br><b>Mr. Bharathi Babu &amp; Mrs. Sujatha B</b><br><small>Thiruvadhur, Kolathur</small></p></div>
+ </div>
+ <p style="font-style:italic;margin:26px 0 0;font-size:19px">With best compliments from both families &amp; relatives</p>
+</div></div></section>
+
+<section><div class="wrap fade"><div class="panel">
+ <div class="section-kicker">The celebrations</div><h2>Mark the moments</h2>
+ <div class="venue-grid">
+  <div class="event"><span class="badge">RECEPTION</span><h3>Sunday Evening</h3><div class="when">11 October 2026<br>6:00 PM onwards</div><div class="where">Arulthiru Adigalar Thirumana Mandapam<br>Melmaruvathur</div></div>
+  <div class="event"><span class="badge">WEDDING</span><h3>Monday Morning</h3><div class="when">12 October 2026<br>9:00 AM – 10:30 AM</div><div class="where">Arulthiru Adigalar Thirumana Mandapam<br>Melmaruvathur</div></div>
+ </div>
+</div></div></section>
+
+<section><div class="wrap fade"><div class="panel">
+ <div class="section-kicker">The countdown</div><h2>The sacred day is approaching</h2>
+ <div class="countdown"><div><b id="d">0</b><small>DAYS</small></div><div><b id="h">0</b><small>HOURS</small></div><div><b id="m">0</b><small>MINUTES</small></div><div><b id="s">0</b><small>SECONDS</small></div></div>
+</div></div></section>
+
+<section><div class="wrap fade"><div class="panel">
+ <div class="section-kicker">Save the dates</div><h2>Two celebrations. Two calendars.</h2>
+ <div class="calendars">
+  <div class="calendar"><h3>Reception</h3><div class="date-label">Sunday · 11 October 2026</div><div class="grid">
+   <span class="head">S</span><span class="head">M</span><span class="head">T</span><span class="head">W</span><span class="head">T</span><span class="head">F</span><span class="head">S</span>
+   <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span>
+   <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+   <span class="active">11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+   <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+   <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+  </div></div>
+  <div class="calendar"><h3>Wedding</h3><div class="date-label">Monday · 12 October 2026</div><div class="grid">
+   <span class="head">S</span><span class="head">M</span><span class="head">T</span><span class="head">W</span><span class="head">T</span><span class="head">F</span><span class="head">S</span>
+   <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span>
+   <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+   <span>11</span><span class="active">12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+   <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+   <span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span><span>31</span>
+  </div></div>
+ </div>
+</div></div></section>
+
+<section><div class="wrap fade"><div class="panel">
+ <div class="section-kicker">The gathering place</div><h2>Venue</h2>
+ <p class="lead"><b>Arulthiru Adigalar Thirumana Mandapam</b><br>Melmaruvathur</p>
+ <div class="rsvp">
+  <a class="button gold" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Arulthiru%20Adigalar%20Thirumana%20Mandapam%20Melmaruvathur">GET DIRECTIONS</a>
+  <a class="button" target="_blank" href="https://wa.me/?text=Mukesh%20%26%20Priyanka%20Wedding%20Invitation">SHARE INVITATION</a>
+ </div>
+</div></div></section>
+
+<div class="footer">Mukesh J ✦ Priyanka B<br><span style="font-size:15px">A celebration of love, family and tradition · 2026</span></div>
+
+<script>
+const target=new Date("2026-10-12T09:00:00+05:30").getTime();
+function tick(){
+ let x=Math.max(0,target-Date.now());
+ d.textContent=Math.floor(x/86400000);
+ h.textContent=Math.floor(x/3600000)%24;
+ m.textContent=Math.floor(x/60000)%60;
+ s.textContent=Math.floor(x/1000)%60;
+}
+tick();setInterval(tick,1000);
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
+</script>
+</body></html>
