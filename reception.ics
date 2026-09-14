@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mukesh Priyanka Wedding//EN
+BEGIN:VEVENT
+UID:mukesh-priyanka-reception-20261011@example.com
+DTSTAMP:20260914T000000Z
+DTSTART:20261011T180000
+DTEND:20261011T210000
+SUMMARY:Reception of Mukesh J & Priyanka B
+LOCATION:Arulthiru Adigalar Thirumana Mandapam, Melmaruvathur
+DESCRIPTION:Wedding reception of Mukesh J and Priyanka B
+END:VEVENT
+END:VCALENDAR
