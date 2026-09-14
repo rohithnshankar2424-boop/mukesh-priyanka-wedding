@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mukesh &amp; Priyanka — Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#FAF3E3;
+    --ivory-deep:#F1E6CC;
+    --maroon:#6B1423;
+    --maroon-deep:#4A0E19;
+    --gold:#A9752E;
+    --gold-light:#C99A4B;
+    --gold-pale:#E4C989;
+    --ink:#3B2A1E;
+    --ink-soft:#7A6A54;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle, var(--gold-pale) 1px, transparent 1.4px) 0 0/22px 22px,
+      var(--ivory);
+    opacity:1;
+    font-family:'EB Garamond', serif;
+    color:var(--ink);
+    padding:32px 14px 56px;
+  }
+  .wrap{
+    max-width:520px;
+    margin:0 auto;
+  }
+  .card{
+    position:relative;
+    background:var(--ivory);
+    border:2px solid var(--gold);
+    box-shadow:
+      inset 0 0 0 6px var(--ivory),
+      inset 0 0 0 8px var(--gold-light);
+    padding:44px 28px 36px;
+    text-align:center;
+    overflow:hidden;
+  }
+  .corner{position:absolute;width:54px;height:54px;opacity:0.9;}
+  .corner-tl{top:14px;left:14px;}
+  .corner-tr{top:14px;right:14px;transform:scaleX(-1);}
+  .corner-bl{bottom:14px;left:14px;transform:scaleY(-1);}
+  .corner-br{bottom:14px;right:14px;transform:scale(-1,-1);}
+
+  .temple{width:140px;height:auto;margin:0 auto 14px;display:block;}
+
+  .invocation-ta{
+    font-family:'Noto Serif Tamil', serif;
+    font-size:17px;
+    font-weight:600;
+    color:var(--maroon);
+    letter-spacing:0.02em;
+    margin:0 0 2px;
+  }
+  .invocation-en{
+    font-style:italic;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:0 0 18px;
+  }
+
+  .rule{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    width:64%;
+    margin:20px auto;
+  }
+  .rule::before,.rule::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background:var(--gold-light);
+  }
+  .rule .mark{
+    width:7px;height:7px;
+    background:var(--gold);
+    transform:rotate(45deg);
+    flex:none;
+  }
+
+  .lede-ta{
+    font-family:'Noto Serif Tamil', serif;
+    font-size:15.5px;
+    line-height:1.9;
+    margin:0 0 6px;
+  }
+  .lede-en{
+    font-size:14.5px;
+    font-style:italic;
+    color:var(--ink-soft);
+    line-height:1.7;
+    margin:0;
+  }
+
+  .nameplate{
+    display:inline-block;
+    background:var(--maroon);
+    background-image:linear-gradient(var(--maroon), var(--maroon-deep));
+    clip-path:polygon(18px 0, calc(100% - 18px) 0, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0 calc(100% - 18px), 0 18px);
+    padding:14px 34px;
+    margin:22px auto 12px;
+  }
+  .name-en{
+    font-family:'Cinzel', serif;
+    font-size:30px;
+    font-weight:600;
+    letter-spacing:0.04em;
+    color:var(--gold-pale);
+  }
+
+  .parent-ta{
+    font-family:'Noto Serif Tamil', serif;
+    font-size:14.5px;
+    line-height:1.8;
+    margin:0 0 4px;
+  }
+  .parent-en{
+    font-size:13.5px;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  .with-text{
+    font-family:'Cinzel', serif;
+    font-size:14px;
+    letter-spacing:0.15em;
+    color:var(--gold);
+    margin:16px 0;
+    font-variant:small-caps;
+  }
+
+  .blessing-ta{
+    font-family:'Noto Serif Tamil', serif;
+    font-size:15px;
+    line-height:1.9;
+    margin:0 0 6px;
+  }
+  .blessing-en{
+    font-size:14px;
+    font-style:italic;
+    color:var(--ink-soft);
+    line-height:1.7;
+    margin:0;
+  }
+
+  .events{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+    justify-content:center;
+    margin:26px 0 8px;
+  }
+  .event{
+    flex:1 1 170px;
+    min-width:150px;
+    border:1px solid var(--gold-light);
+    padding:16px 14px 18px;
+  }
+  .event-ta{
+    font-family:'Noto Serif Tamil', serif;
+    font-size:16px;
+    font-weight:600;
+    color:var(--maroon);
+    margin:0;
+  }
+  .event-en{
+    font-family:'Cinzel', serif;
+    font-variant:small-caps;
+    letter-spacing:0.1em;
+    font-size:13px;
+    color:var(--gold);
+    margin:2px 0 10px;
+  }
+  .event-line{
+    width:28px;height:1px;
+    background:var(--gold-light);
+    margin:0 auto 10px;
+  }
+  .event-date-ta,.event-time-ta{
+    font-family:'Noto Serif Tamil', serif;
+    font-size:13px;
+    line-height:1.7;
+    margin:0 0 4px;
+  }
+  .event-date-en,.event-time-en{
+    font-size:12.5px;
+    font-style:italic;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin:0 0 2px;
+  }
+
+  .venue{margin:26px 0 6px;}
+  .venue svg{width:16px;height:16px;fill:var(--gold);vertical-align:-3px;margin-right:5px;}
+  .venue-ta{
+    font-family:'Noto Serif Tamil', serif;
+    font-size:14px;
+    line-height:1.8;
+    color:var(--maroon-deep);
+    margin:0 0 4px;
+  }
+  .venue-en{
+    font-size:13px;
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:0;
+  }
+
+  .footer{
+    margin-top:26px;
+    padding-top:16px;
+    border-top:1px solid var(--gold-light);
+  }
+  .footer p{margin:0;}
+  .footer .pre{font-size:13px;font-style:italic;color:var(--ink-soft);}
+  .footer .strong{
+    font-family:'Cinzel', serif;
+    font-size:15px;
+    letter-spacing:0.06em;
+    color:var(--maroon);
+    margin-top:4px;
+    font-variant:small-caps;
+  }
+
+  @media (max-width:400px){
+    .card{padding:34px 16px 28px;}
+    .name-en{font-size:25px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="card">
+
+    <svg class="corner corner-tl" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 30 C 2 14, 14 2, 30 2" fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+      <path d="M2 40 C 2 20, 20 2, 40 2" fill="none" stroke="var(--gold-light)" stroke-width="1"/>
+      <path d="M10 18 Q 14 8, 24 6 Q 18 14, 22 22 Q 14 20, 10 18 Z" fill="var(--gold)" opacity="0.85"/>
+    </svg>
+    <svg class="corner corner-tr" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 30 C 2 14, 14 2, 30 2" fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+      <path d="M2 40 C 2 20, 20 2, 40 2" fill="none" stroke="var(--gold-light)" stroke-width="1"/>
+      <path d="M10 18 Q 14 8, 24 6 Q 18 14, 22 22 Q 14 20, 10 18 Z" fill="var(--gold)" opacity="0.85"/>
+    </svg>
+    <svg class="corner corner-bl" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 30 C 2 14, 14 2, 30 2" fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+      <path d="M2 40 C 2 20, 20 2, 40 2" fill="none" stroke="var(--gold-light)" stroke-width="1"/>
+      <path d="M10 18 Q 14 8, 24 6 Q 18 14, 22 22 Q 14 20, 10 18 Z" fill="var(--gold)" opacity="0.85"/>
+    </svg>
+    <svg class="corner corner-br" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+      <path d="M2 30 C 2 14, 14 2, 30 2" fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+      <path d="M2 40 C 2 20, 20 2, 40 2" fill="none" stroke="var(--gold-light)" stroke-width="1"/>
+      <path d="M10 18 Q 14 8, 24 6 Q 18 14, 22 22 Q 14 20, 10 18 Z" fill="var(--gold)" opacity="0.85"/>
+    </svg>
+
+    <svg class="temple" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="116" rx="4" ry="9" fill="var(--gold)"/>
+      <path d="M92 110 L92 96 L108 96 L108 110 Z" fill="none" stroke="var(--gold)" stroke-width="1.6"/>
+      <path d="M70 96 L130 96 L118 78 L82 78 Z" fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+      <path d="M78 78 L122 78 L112 62 L88 62 Z" fill="none" stroke="var(--gold-light)" stroke-width="1.3"/>
+      <path d="M86 62 L114 62 L106 48 L94 48 Z" fill="none" stroke="var(--gold)" stroke-width="1.2"/>
+      <path d="M94 48 L106 48 L100 36 Z" fill="none" stroke="var(--gold-light)" stroke-width="1.1"/>
+      <circle cx="100" cy="30" r="4" fill="var(--gold)"/>
+      <path d="M60 96 L140 96" stroke="var(--gold)" stroke-width="1.4"/>
+      <path d="M55 96 L55 110 M145 96 L145 110" stroke="var(--gold-light)" stroke-width="1.2"/>
+    </svg>
+
+    <p class="invocation-ta">எல்லையம்மன் துணை</p>
+    <p class="invocation-en">Ellaiyamman Thunai</p>
+
+    <div class="rule"><div class="mark"></div></div>
+
+    <p class="lede-ta">திருமண விழாவிற்கு தங்களை<br>அன்புடன் அழைக்கிறோம்.</p>
+    <p class="lede-en">We cordially invite you to the wedding ceremony<br>of our beloved son,</p>
+
+    <div class="nameplate"><span class="name-en">Mukesh J</span></div>
+    <p class="parent-ta">திரு. ஜெய்சங்கர் மற்றும் திருமதி. தேவிகா<br>அவர்களின் மகன்</p>
+    <p class="parent-en">Son of Mr. Jaishankar &amp; Mrs. Devika</p>
+
+    <p class="with-text">with</p>
+
+    <div class="nameplate"><span class="name-en">Priyanka B</span></div>
+    <p class="parent-ta">திரு. பாரதிபாபு மற்றும் திருமதி. சுஜாதா B<br>அவர்களின் மகள்</p>
+    <p class="parent-en">Daughter of Mr. Bharathi Babu &amp; Mrs. Sujatha B</p>
+
+    <div class="rule"><div class="mark"></div></div>
+
+    <p class="blessing-ta">இருவரையும் இணைக்கும் இந்த நல்ல நாளில்<br>உங்கள் வருகை எங்களின் குடும்பத்திற்கு பெருமை சேர்க்கும்.</p>
+    <p class="blessing-en">We are delighted to share this special moment with you<br>and your family. Your gracious presence will make our<br>celebration even more special.</p>
+
+    <div class="events">
+      <div class="event">
+        <p class="event-ta">திருமணம்</p>
+        <p class="event-en">Wedding</p>
+        <div class="event-line"></div>
+        <p class="event-date-ta">12ம் அக்டோபர் 2026<br>(திங்கள்)</p>
+        <p class="event-time-ta">காலை 9:00 மணி முதல்<br>10:30 மணி வரை</p>
+        <p class="event-date-en">12th October 2026 (Monday)</p>
+        <p class="event-time-en">9:00 AM – 10:30 AM</p>
+      </div>
+      <div class="event">
+        <p class="event-ta">வரவேற்பு</p>
+        <p class="event-en">Reception</p>
+        <div class="event-line"></div>
+        <p class="event-date-ta">11ம் அக்டோபர் 2026<br>(ஞாயிற்றுக்கிழமை)</p>
+        <p class="event-time-ta">மாலை 6:00 மணி முதல்</p>
+        <p class="event-date-en">11th October 2026 (Sunday)</p>
+        <p class="event-time-en">6:00 PM onwards</p>
+      </div>
+    </div>
+
+    <div class="venue">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C7.6 2 4 5.6 4 10c0 6 8 12 8 12s8-6 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 110-6 3 3 0 010 6z"/></svg>
+      <p class="venue-ta">அருள்திரு அடிகளார் திருமண மண்டபம்,<br>மேல்மருவத்தூர்.</p>
+      <p class="venue-en">Arulthiru Adigalar Thirumana Mandapam,<br>Melmaruvathur.</p>
+    </div>
+
+    <div class="footer">
+      <p class="pre">With best compliments from</p>
+      <p class="strong">Friends and relatives</p>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
